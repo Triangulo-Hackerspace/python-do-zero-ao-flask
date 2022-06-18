@@ -1,0 +1,1072 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Introdução ao Python</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>Introdução ao Python</h3>
+				<small></small>
+				<p>
+					<small>Prof. <a href="https://about.me/rogeriofontes">Rogério Fontes</a> / <a
+							href="http://twitter.com/rogeriofontes">@rogeriofontes</a><br /></small>
+				</p>
+			</section>
+
+			<!--section>
+				<h5>Conteúdo Programático:</h5>
+				<ul>
+					<li>Noções básicas de redes de computadores.</li>
+					<li>Protocolos.</li>
+					<li>Comutação.</li>
+					<li>Arquitetura de redes.</li>
+					<li>A Internet.</li>
+					<li>Protocolos de camada de aplicação, HTTP, SMTP, DNS, FTP.</li>
+					<li>Camada de transporte.</li>
+				</ul>
+			</section-->
+			<section>
+				<h5>Criação do Python</h5>
+				<p>
+					<span style="font-size: 24px;">Criado por Guido Van Rossum em meados dos anos 90, o Python é uma
+						linguagem de programação de alto
+						nível, multiplataforma e open source. Ela é multiparadigma, suportando diversos paradigmas de
+						desenvolvimento, como, orientado a objetos, funcional, imperativo, interpretado, entre
+						outros.</span>
+				</p>
+			</section>
+			<section>
+				<h5>Tipagem dinamica</h5>
+				<p>
+					<span style="font-size: 24px;">Python, possui tipagem dinâmica, ou seja ela não exigige que os tipos
+						de dados sejam declarados,
+						pois são capazes de realizar esta escolha dinamicamente. Com isso, durante a execução ou na
+						compilação, o tipo de uma variável poderá ser alterado.</span>
+				</p>
+			</section>
+			<section>
+				<h5>Tipagem forte</h5>
+				<p>
+					<span style="font-size: 24px;">Python possui como característica a tipagem forte, isso quer dizer
+						que a linguagem não realiza
+						conversões automaticamente entre os tipos suportados.</span>
+				</p>
+			</section>
+			<section>
+				<section>
+					<h5>Variável</h5>
+					<p>
+						<span style="font-size: 24px;">O conceito de variável em Python é representado sempre por um
+							objeto, tudo Python é objeto, alem
+							disso toda variável é uma referência. Em Python as variáveis armazenam endereços de memória
+							e
+							não os valores, como em outras linguagens.</span>
+					</p>
+				</section>
+				<section>
+					<h5>Para criar variaveis em Python temos algumas regras:</h5>
+					<p>
+					<ul style="font-size: 24px;">
+						<li>O nome de variável deve começar com uma letra ou o caractere sublinhado.</li>
+						<li>O nome de variável não pode começar com um número.</li>
+						<li>O nome de variável pode conter apenas caracteres alfanuméricos e sublinhados (A-z, 0-9 e _ )
+						</li>
+						<li>Os nomes das variáveis ​​diferenciam maiúsculas de minúsculas (case-sensitive) (idade, idade
+							e IDADE são três variáveis ​​diferentes).</li>
+						<li>O nome da variável deve ser diferente dos comandos da linguagem(if, for, def) .</li>
+					</ul>
+					</p>
+				</section>
+				<section>
+					<h5>Exemplo:</h5>
+					<p>
+					<pre>
+nome_treinamento = "THS" 
+
+print(nome_treinamento) # THS
+						</pre>
+					</p>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h5>Constantes</h5>
+					<p>
+						<span style="font-size: 24px;">As regras de nomeação das constantes no Python segue o padrão das
+							variáveis. A diferença de que
+							todas as letras são maiúsculas e separadas por underline “_”</span>
+					</p>
+				</section>
+
+				<section>
+					<h5>Exemplo:</h5>
+					<p>
+					<pre>
+VALOR_TEMPERATURA = 10
+
+print(VALOR_TEMPERATURA) # 10
+</pre>
+					</p>
+				</section>
+			</section>
+
+			<section>
+				<h5>Imprimir uma variável</h5>
+				<p>
+					<span style="font-size: 24px;">Para imprimir variáveis em Python usa-se a função print (). Com ela é
+						possível imprimir tanto
+						constantes, como nos comandos:</span>
+				<pre>
+print ("Minha primeira mensagem em Python")
+print (34+56)
+</pre>
+				</p>
+			</section>
+
+			<section>
+				<h5>Formatação da Impressão de Variáveis</h5>
+				<p>
+					<span style="font-size: 24px;">É possível definir a aparência de um número que será impresso na
+						tela. Para tanto, pode-se usar um
+						comando de formatação dentro de uma string como no trecho</span>
+				<pre>
+	a=3.2
+	print("Valor = %6.3f " %a)
+	que gerará como saída a mensagem
+	Valor =  3.200
+</pre>
+				</p>
+			</section>
+
+			<section>
+				<section>
+					<h5>Tipos de Dados no Python</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Python possui vários tipos básicos ou fundamentais: números inteiros, números de ponto
+							flutuante, booleanos, números complexos, cadeias de caracteres, etc.
+						</span>
+					</p>
+				</section>
+				<section>
+					<h5>Inteiro</h5>
+					<p>
+						<span style="font-size: 24px;">
+							O tipo inteiro é representado por toda e qualquer informação numérica que pertença ao
+							conjunto de números inteiros relativos (números positivos, negativos ou o zero).
+						</span>
+					<pre>
+inteiro = 15
+print(type(inteiro)) # <class 'int'>
+</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Float</h5>
+					<p>
+						<span style="font-size: 24px;">
+							O tipo float é representado por números decimais.
+						</span>
+					<pre>
+ponto_flutuante =  25.10
+print(type(ponto_flutuante)) # <class 'float'>
+</pre>
+					</p>
+				</section>
+
+				<section>
+					<h5>String</h5>
+					<p>
+						<span style="font-size: 24px;">
+							String é uma cadeia de caracteres.
+						</span>
+					<pre>
+nome = 'THS'
+print(type(nome)) # <class 'str'>
+</pre>
+					</p>
+				</section>
+
+				<section>
+					<h5>String</h5>
+					<p>
+					<pre>
+texto = "THS"
+texto = """THS e um grupo de entuiastas de 
+		codigo e hardware e no nivel mais baixo possivel"""
+	
+print(nome) 
+</pre>
+					</p>
+				</section>
+
+				<section>
+					<h5>String metodos</h5>
+					<p>
+					<pre>
+	meu_nome = "Rogerio Fontes"
+	meu_nick = '@rogeriofontes'
+	print ("Nome: %s, Nick: %s" % (meu_nome.upper(), meu_nick))
+	print ("Meu nome comeca com a letra ", meu_nome[0])
+	print ("Meu nome comeca com a letra ", meu_nome[0].lower())
+	print ("Meu primeiro nome é ", meu_nome[0:7])
+</pre>
+					</p>
+				</section>
+
+				<section>
+					<h5>String simbolos</h5>
+					<p>
+
+					<table style="font-size: 18px;">
+						<tr>
+							<th>Formato do Símbolo</th>
+							<th>Conversão</th>
+						</tr>
+						<tr>
+							<td>%c</td>
+							<td>Caractere</td>
+						</tr>
+						<tr>
+							<td>%s</td>
+							<td>String convertida pelo método str() tem prioridade</td>
+						</tr>
+						<tr>
+							<td>%i</td>
+							<td>Sinal decimal inteiro</td>
+						</tr>
+						<tr>
+							<td>%d</td>
+							<td>Sinal decimal inteiro</td>
+						</tr>
+						<tr>
+							<td>%u</td>
+							<td>Decimal inteiro sem negativos (unsigned)</td>
+						</tr>
+						<tr>
+							<td>%o</td>
+							<td>Octal inteiro</td>
+						</tr>
+						<tr>
+							<td>%x</td>
+							<td>Hexadecimal Inteiro (letras em caixa baixa)</td>
+						</tr>
+						<tr>
+							<td>%X</td>
+							<td>Hexadecimal Inteiro (Letras em Caixa ALTA)</td>
+						</tr>
+						<tr>
+							<td>%e</td>
+							<td>Notação exponencial (Para letras minúsculas ‘e’)</td>
+						</tr>
+						<tr>
+							<td>%E</td>
+							<td>Notação exponencial (Para letras MAIÚSCULAS ‘E’)</td>
+						</tr>
+						<tr>
+							<td>%f</td>
+							<td>Ponto flutuante (Números reais)</td>
+						</tr>
+						<tr>
+							<td>%g</td>
+							<td>O mais curto de ‘f%’ e ‘%e’</td>
+						</tr>
+						<tr>
+							<td>%G</td>
+							<td>O mais curto de ‘f%’ e ‘%E’</td>
+						</tr>
+					</table>
+
+					</p>
+				</section>
+
+				<section>
+					<h5>Booleano</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Variáveis booleanas armazenam valores lógicos que podem ser verdadeiro ou falso.
+						</span>
+					<pre>
+booleano = True
+print(type(booleano)) # <class 'bool'>
+</pre>
+					</p>
+				</section>
+
+				<section>
+					<h5>Tipo complexo</h5>
+					<p>
+						<span style="font-size: 24px;">
+							As variáveis de tipo complexo armazenam dados com formato misto, ou seja, dados de
+							diferentes tipos em uma mesma sentença.
+						</span>
+					<pre>
+numero_complexo = 25 + 3j
+print(type(complexo)) # <class 'complex'>
+</pre>
+					</p>
+				</section>
+
+
+			</section>
+
+			<section>
+				<h5>Entrada de Dados no Python</h5>
+				<p>
+					<span style="font-size: 24px;">
+						Em Python, a leitura de dados do teclado é feita através das funções raw_input e input, como
+						mostra o exemplo da Listagem 6. Contudo, em versões superiores a 3.0, a função raw_input não
+						funciona.
+					</span>
+				</p>
+				<pre>
+import sys
+
+nome = input("Digite seu nome: ")
+idade = input("Digite sua idade: ")
+print("Digite seu sexo: ")
+sexo = sys.stdin.readline()
+
+print("Nome:"+nome + "\n" + "Sexo: %s Idade: %s" %(sexo,idade))
+
+				</pre>
+			</section>
+
+			<section>
+				<h5>Operadores</h5>
+				<p>
+					<span style="font-size: 24px;">
+						Resume como são utilizados os operadores na linguagem.
+					</span>
+				<table style="font-size: 18px;">
+					<tr>
+						<th>Aritméticos</th>
+						<th>Comparação</th>
+						<th>Lógicos</th>
+					</tr>
+					<tr>
+						<td>+</td>
+						<td>==</td>
+						<td>and</td>
+					</tr>
+					<tr>
+						<td>-</td>
+						<td>!=</td>
+						<td>or</td>
+					</tr>
+					<tr>
+						<td>*</td>
+						<td>></td>
+						<td>not</td>
+					</tr>
+					<tr>
+						<td>/ ou // (parte inteira)</td>
+						<td>
+							<</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>%</td>
+						<td>>=</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>+= -= *= /=</td>
+						<td>
+							<=</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>**</td>
+						<td>in in not</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>is</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+				</p>
+			</section>
+
+			<section>
+				<section>
+					<h5>Comandos de Decisão e LOOPs</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Condicionais em Python tem uma estrutura básica:
+						</span>
+					<pre>
+    	      if  CONDIÇÃO :
+ 	       BLOCO DE CÓDIGO
+	      elif  CONDIÇÃO :
+	       BLOCO DE CÓDIGO
+	      else :
+  	       BLOCO DE CÓDIGO
+						</pre>
+					</p>
+				</section>
+				<section>
+					<h5>IF, ELIF, ELSE no Python</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Em Python não usamos as chaves {} basta identar o código para ter o bloco.
+						</span>
+					<pre>
+# coding:utf-8
+idade = int(input("Você tem quantos anos? "))
+							
+if idade == 18:
+  print("Você tem 18 anos")
+elif idade > 18:
+  print("Você tem mais de 18 anos")
+else:
+  print("Você é menor de idade”)	
+						</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Switch Case</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Outra forma de utilizar o if, elif e else, é implementando-o como uma estrutura switch, onde
+							cada elif vai ter um case dentro do switch.
+						</span>
+					<pre>
+# coding: utf-8
+temperature = int(input("Digite a temperatura:"))
+							
+if temperature > 30:
+	print("Ligue o ar condicionado")
+elif temperature > 50:
+	print("Liga o Alarme de Aviso")
+elif temperature < 18:
+	print("Alarme Desligado")        
+else:
+	print("Alarme Desligado")
+						</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Função RANGE()</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Existe também a função range(), que retorna um array, ou seja, os elementos são
+							representados em uma sequência
+						</span>
+					<pre>
+print (range(10)) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print (range(5, 10)) # [5, 6, 7, 8, 9]
+print (range(10, 0)) # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+							
+i=int(input("Digite um Número"))
+if i in range(0,10):
+  print("Está Contido")
+else:
+  print("Não está Contido")	
+						</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Laço de Repetição FOR</h5>
+					<p>
+						<span style="font-size: 24px;">
+							No laço de repetição for é implementado em Python e pode ser utilizado de diversas maneiras
+						</span>
+					<pre>
+# coding: utf-8
+alunos = ["Daniela Peixoto", "Rafaela Vieira", "Catarina Barbosa", 
+"Carlos Eduardo Monteiro", "Laís Barbosa", "Bernardo Alves", "Felipe Pereira", "Sophia Correia", 
+"Yuri Gonçalves", "Julia das Neves"]
+for aluno in alunos:
+	print("Aluno : " + aluno)
+print("------------------------------")
+for name in range(2, 8):  # range de informaceo
+	print(alunos[name])
+print("------------------------------")
+for i in range(0, 10):  # (Inclui o Zero, NÃO INCLUI O 10)
+	print("i = " + str(i))
+print("------------------------------")
+for i in range(0, 10):
+	print('Não realizado1')
+	if i == 0:
+		break
+print('Realizado')
+						</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Laços de repetição WHILE no Python</h5>
+					<p>
+						<span style="font-size: 24px;">
+							O laço de repetição while no Python tem basicamente a mesma estrutura do for, porém, como no
+							for ou if, não se utilizam os parênteses para definir a condição e seu bloco de instrução
+							também é definido com a identação.
+						</span>
+					<pre>
+i = 0
+while i < 10:
+  print ("i = ",i)
+  i += 1
+							
+while True:
+  pass
+							
+						</pre>
+
+					</p>
+				</section>
+				<section>
+					<h5>Exceções</h5>
+					<p>
+						<span style="font-size: 24px;">
+							As exceções podem ser tratadas utilizando o recurso do try...catch tem uma estrutura básica.
+						</span>
+					<pre>
+try:
+   print (1 + 'st try')
+except:
+   print ("Isto é uma exceção")
+						</pre>
+					</p>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h5>Lista</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Uma lista é um conjunto de valores indexados por um número inteiro chamado de índice, que se
+							inicia em zero.
+							<br />
+							Os elementos contidos em uma lista podem ser de qualquer tipo, até mesmo outras listas, e
+							não precisam ser todos do mesmo tipo. Uma lista é delimitada por colchetes e seus elementos
+							separados por vírgulas.
+						</span>
+					<pre>
+lista = [1, 2, 3]
+print ("Tamanho de lista:", len(lista))
+							
+lista[0]=9
+print("-----------")
+for i in range(len(lista)):
+  print (lista[i])
+						</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Lista e Indices</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Usar índices negativos, as posições são acessadas a partir do final da lista.
+						</span>
+					<pre>
+lista = [1, 2, 3]
+print (lista[0])
+imprime 1;
+print (lista[1])
+imprime valor 2;
+print (lista[-1])
+imprime 3;
+print (lista[-2])
+imprime 2;
+print (lista[0:2])
+imprime [1,2];
+print (lista[:2])
+imprime [1,2];
+print (lista[1:])
+imprime [2,3];
+						</pre>
+					</p>
+				</section>
+
+				<section>
+					<h5>Exemplo de metodos das Listas:</h5>
+					<p>
+						<span style="font-size: 24px;">
+							A função capitalize() deixa a string em caixa alta.
+						</span>
+					<pre>
+frutas=['laranja','banana','abacaxi']
+
+frutas.sort()
+print (frutas)
+frutas[0]='caju';
+							
+for item in frutas:
+  print (item.capitalize())	
+				    	</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Gerenciando Lista</h5>
+					<p>
+						<span style="font-size: 24px;">
+							O código é responsável por criar uma lista adicionando elementos, exibir os convidados e
+							remover um deles, exibindo logo após uma lista atualizada dentro do laço for.
+						</span>
+					<pre>
+alunos = ["Daniela Peixoto", "Rafaela Vieira", "Catarina Barbosa", "Carlos Eduardo Monteiro", "Laís Barbosa",
+          "Bernardo Alves", "Felipe Pereira", "Sophia Correia", "Yuri Gonçalves", "Julia das Neves",
+		  "Manuela Aragão"]  # define uma lista vazia
+print("Tenho ", len(alunos), " Convidados")
+alunos.sort()
+print("Sao eles:")
+print(alunos)
+print("O primeiro aluno eh o ", alunos[0])
+alunos.remove("Bernardo Alves");  # aqui tiramos o Exemplo 4 da lista
+print("Agora tenho somente ", len(alunos), " Convidados")
+print("Sao eles:")
+for aluno in alunos:
+    print(aluno)
+				  
+				    	</pre>
+					</p>
+				</section>
+
+				<section>
+					<h5>Tuplas</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Até agora foram vistos dois tipos compostos: strings, que são compostos de caracteres; e
+							listas, que são compostas de elementos de qualquer tipo. Uma das diferenças que notamos é
+							que os elementos de uma lista podem ser modificados, mas os caracteres em uma string não. Em
+							outras palavras, strings são imutáveis e listas são mutáveis.<br />
+							Em Python existem uma tipo chamado tupla (tuple), que é similar a uma lista, exceto por ser
+							imutável. Sintaticamente, uma tupla é uma lista de valores separados por vírgulas e com
+							aspas simples.
+						</span>
+					<pre>
+frutas=('laranja','banana','abacaxi')
+
+frutas.sort()
+print (frutas)
+frutas[0]='framboesa';
+for item in frutas:
+  print (item.capitalize())
+				    	</pre>
+					</p>
+				</section>
+
+				<section>
+					<h5>Tuplas</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Um mapeamento é uma coleção de associações entre pares de valores, onde o primeiro elemento
+							do par é chamado de chave e o outro de conteúdo. De certa forma, o mapeamento é uma
+							generalização utilizada para acessar os dados das listas pelas suas chaves que funcionariam
+							como índices, contudo estas chaves necessitam ser imutáveis.
+						</span>
+					</p>
+					<pre>
+veiculo = {}
+veiculo['marca'] = 'Puma'
+veiculo['modelo'] = 'GTB'
+veiculo['ano'] = 1978
+print (veiculo['marca'])
+dicionario = {"chave":"17,532","chave2": "17,365" }
+print (dicionario ["chave"]) #imprime valor (17,532)
+					</pre>
+				</section>
+
+			</section>
+
+
+			<section>
+				<h5>Matriz com Listas no Python</h5>
+				<p>
+					<span style="font-size: 24px;">
+						Python o conceito de arrays multidimensionais não existe. O que existe é uma alternativa, que
+						são os arrays encadeados, ou seja, cada elemento do array corresponde a outro array, ou como uma
+						list de list em Java.
+					</span>
+				<pre>
+#Criando uma matriz de 10x5 inicializada com 0
+lin=10
+col=5
+matriz=[]
+for i in range(0,lin):
+  linha=[]
+  for j in range(0,col):
+  linha.append(0)
+  matriz.append(linha)
+#varrendo a matriz
+for i in range(0,len(matriz)):
+  for j in range(0,len(matriz[0])):
+    print (matriz[i][j])
+						</pre>
+				</p>
+			</section>
+
+			<section>
+				<section>
+					<h5>Funções</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Assim como em outras linguagens, uma função pode receber alguns parâmetros e devolver um resultado. A sintaxe inicia-se com a palavra def, seguida do nome da função e dos parênteses que podem conter seus parâmetros. As funções também são consideradas objetos e têm alguns atributos, dentre os quais os mais úteis são __doc__, o qual contém a documentação da função, e __name__, que contém o nome (apelido) da função.
+						</span>
+					</p>
+				</section>
+				<section>
+					<h5>Funções</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Mas antes de entrar diretamente no código, é importante abordar sobre a recursividade da linguagem e sobre a documentação da função. Recursividade de uma função basicamente é a definição de uma sub-rotina, seja ela função ou método, que tem a capacidade de invocar a si mesmo como, por exemplo, o fatorial.
+						</span>
+					</p>
+				</section>
+				<section>
+					<h5>Função recursiva</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Outro recurso é a documentação, que nada mais é do que um comentário dentro da função que é exibido quando utiliza-se o método __doc__
+						</span>
+					<pre>
+def fatorial (numero): #função recursiva
+"""
+Funcao recursiva
+As três aspas duplas é a documentação
+"""
+if numero <= 1:
+  return 1
+else:
+    return (numero * fatorial (numero - 1 ))
+for n in range ( 1, 11 ):
+ print ("Fatorial de",n," eh ", fatorial(n))
+print ("\nDoc. da função:\n"+fatorial.__doc__)
+						</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Funções com parâmetros</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Também é possível utilizar função em Python com parâmetros opcionais como, por exemplo, uma função que calcula a potência, onde poderíamos ou não informar o expoente.
+						</span>
+					</p>
+					<pre>
+def potencia(base,exp=2): # função com parâmetro opcional
+if exp==0:
+  return 1
+pot=base;i=1;
+while i < exp:
+  pot=pot*base
+  i=i+1
+return pot
+print("Começa aqui!")
+print (potencia(2)) # imprime 4
+print (potencia(2,8)) #imprime 256
+
+					</pre>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h5>Arquivos no Python</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Mas antes de entrar diretamente no código, é importante abordar sobre a recursividade da linguagem e sobre a documentação da função. Recursividade de uma função basicamente é a definição de uma sub-rotina, seja ela função ou método, que tem a capacidade de invocar a si mesmo como, por exemplo, o fatorial.
+						</span>
+					</p>
+				</section>
+				<section>
+					<h5>Arquivos no Python</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Em Python, os arquivos são tratados em dois modos como texto ou binário. O arquivo pode estar no formato texto ou binário, e cada linha de um arquivo termina com o caractere especial.<br />
+							Portanto, uma operação de arquivo pode ser feita na seguinte ordem. <br />
+							<ul style="font-size: 24px;">
+								<li>Abra um arquivo</li>
+								<li>Ler ou escrever - Executando a operação</li>
+								<li>Feche o arquivo</li>
+							</ul>
+						</span>
+					</p>
+				</section>
+				<section>
+					<h5>Escrevendo arquivos</h5>
+					<pre>
+arq=open('/home/rogerioz/meuarquivo.txt', 'w')
+arq.write('gravando em um arquivo é simples o')
+arq.close ()
+					</pre>
+				</section>
+				<section>
+					<h5>Lendo arquivos</h5>
+					<pre>
+arq = open('/home/rogerioz/meuarquivo.txt') # r é default
+leitura = arq.read(3)
+print(leitura)
+restante=arq.read()
+print(restante)
+					</pre>
+				</section>
+				<section>
+					<h5>Lista de argumentos que podemos usar</h5>
+					<p>
+						<table style="font-size: 18px;">
+							<tr>
+								<th>Argumento</th>
+								<th>Ação</th>
+							</tr>
+							<tr>
+								<td>W</td>
+								<td>Sempre cria um novo arquivo para escrita.</td>
+							</tr>
+							<tr>
+								<td>w+</td>
+								<td>O mesmo que “w”, mas abre para escrita e leitura.</td>
+							</tr>
+							<tr>
+								<td>R</td>
+								<td>Abre para leitura.</td>
+							</tr>
+							<tr>
+								<td>A</td>
+								<td>Abre o arquivo para escrita, mantendo o conteúdo e posiciona o cursor no ﬁnal do arquivo, utilizado para adicionar conteúdos.</td>
+							</tr>
+							<tr>
+								<td>a+</td>
+								<td>O mesmo que ‘a’, mas abre para leitura e escrita.</td>
+							</tr>
+							<tr>
+								<td>B</td>
+								<td>Em combinação com os modos acima, manipula os arquivos binários (wb, rb, ab+,...).</td>
+							</tr>
+						</table>
+					</p>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h5>Orientação a Objetos</h5>
+					<p>
+						<span style="font-size: 24px;">
+							O Python é uma linguagem de programação orientada à objetos, o que significa que ela possui recursos que dão suporte à programação orientada à objetos (POO).
+						</span>
+					</p>
+				</section>
+				<section>
+					<h5>Classes</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Classe sempre são repesentaçãos do mundo real. No Python, todas as classes devem, por boas práticas, possuir nomes que comecem com letra maiúscula e, caso sejam compostos, a primeira letra de cada palavra deve ser maiúscula, o que chamamos de formato CamelCase.
+						</span>
+						<pre>
+	class AlunoPresentes()
+		# atributos e metodos vem aqui
+						</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Construtor da classe</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Uma classe é representada por atributos e métodos, esses representam as características da classe e os métodos definem o comportamento da classe. Para declarar um atributo em uma classe definimos o nome do atributo no método especial chamado __init__, este método define o construtor da classe. Para definir os atributos de uma classe em seu construtor, basta passá-los como parâmetro
+						</span>
+						<pre>
+	class Aluno:
+	def __init__(self, nome, sexo, cpf):
+		self.nome = nome
+		self.sexo = sexo
+		self.cpf = cpf
+						</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Instanciando objetos</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Para instanciar um objeto no Python, só precisamos chamar a Classe informando os valores referentes aos seus atributos
+						</span>
+						<pre>
+	class Aluno:
+		def __init__(self, nome, sexo, cpf):
+			self.nome = nome
+			self.sexo = sexo
+			self.cpf = cpf
+						
+		if __name__ == "__main__":
+			pessoa1 = Pessoa("João", "M", "123456")
+			print(pessoa1.nome)				
+						</pre>
+					</p>
+				</section>
+				<section>
+					<h5>Métodos</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Para criarmos um método, utilizamos a palavra reservada def
+						</span>
+					</p>
+					<pre>
+class Aluno:
+def __init__(self, nome, sexo, cpf, ativo):
+	self.nome = nome
+	self.sexo = sexo
+	self.cpf = cpf
+	self.ativo = ativo
+							
+def naoPresente(self):
+	self.ativo = False
+	print("O aluno não esta presente Hoje")
+					
+if __name__ == "__main__":
+	pessoa1 = Pessoa("João", "M", "123456", True)
+	pessoa1.naoPresente()						
+					</pre>
+				</section>
+				<section>
+					<h5>Encapsulamento e Modificadores</h5>
+					<p>
+						<span style="font-size: 24px;">
+							Encapsulamento visa definir o que pode ou não ser acessado de forma externa da classe. para isso precisamos definir os atributos como privado usando (__), com isso precisamos ter metodos para acessar esses atributos <b>get</b> e <b>set</b>.
+							<ul style="font-size: 24px;">
+								<li>Public: Atributos e métodos definidos como públicos poderão ser invocados, acessados e modificados através de qualquer lugar do projeto;</li>
+								<li>Private: Atributos e métodos definidos como privados só poderão ser invocados, acessados e modificados somente por seu próprio objeto.</li>
+								<li>Protected: Atributos e métodos definidos como protegidos só poderão ser invocados, acessados e modificados por classes que herdam de outras classes através do conceito de Herança.</li>
+							</ul>
+						</span>
+					</p>
+				</section>
+				<section>
+					<h5>Encapsulamento e Modificadores</h5>
+					<pre>
+class Aluno:
+def __init__(self, nome, sexo, cpf, ativo):
+	self.__nome = nome
+	self.__sexo = sexo
+	self.__cpf = cpf
+	self.__ativo = ativo
+													
+def naoPresente(self):
+	self.ativo = False
+	print("O aluno não esta presente Hoje")
+
+def get_nome(self):
+	return self.__nome
+
+def set_nome(self, nome):
+	self.__nome = nome								
+</pre>
+				</section>
+				<section>
+					<h5>Encapsulamento e Modificadores</h5>
+					<pre>
+...
+											
+if __name__ == "__main__":
+	pessoa1 = Pessoa("João", "M", "123456", True)
+	pessoa1.naoPresente()	
+	
+	# Utilizando geters e setters
+    pessoa1.set_nome("José")
+    print(pessoa1.get_nome())
+</pre>
+				</section>
+				<section>
+					<h5>Properties</h5>
+					<p style="font-size: 24px;">
+						A @property é um decorator integrado à função property() em Python (texto em inglês). Ela é usada para dar uma funcionalidade "especial" a certos métodos para fazer com que ajam como getters, setters ou deleters quando definimos as propriedades em uma classe.
+					</p>
+					<pre><span style="font-size: 18px;">
+class Aluno:
+def __init__(self, nome, sexo, cpf, ativo):
+	self.__nome = nome
+	self.__sexo = sexo
+	self.__cpf = cpf
+	self.__ativo = ativo
+													
+@property
+def nome(self):
+    return self.__nome
+    
+@nome.setter
+def nome(self, nome):
+    self.__nome = nome
+</span></pre>
+				</section>
+				<section>
+					<h5>Properties</h5>
+					<p style="font-size: 24px;">
+						A @property é um decorator integrado à função property() em Python (texto em inglês). Ela é usada para dar uma funcionalidade "especial" a certos métodos para fazer com que ajam como getters, setters ou deleters quando definimos as propriedades em uma classe.
+					</p>
+					<pre><span style="font-size: 24px;">
+...
+
+if __name__ == "__main__":
+	pessoa1 = Pessoa("João", "M", "123456", True)
+
+	# Utilizando properties
+    pessoa1.nome = "José"
+    print(pessoa1.nome)
+
+</span></pre>
+				</section>
+			</section>
+
+			<section>
+				<h3>Referência</h3>
+				<p>
+				<ul style="font-size:24px">
+					<li>https://www.python.org/</li>
+					<li>https://python.org.br/</li>
+					<li>https://www.pycursos.com.br/python-para-zumbis/</li>
+					<li>https://www.youtube.com/playlist?list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc</li>
+					<li>https://www.youtube.com/channel/UCripRddD4BnaMcU833ExuwA</li>
+				</ul>
+				</p>
+			</section>
+			<section>
+				<img data-src="img/Respect_8-512.png" alt="Obrigado">
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
